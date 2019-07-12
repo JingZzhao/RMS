@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.loginController">
+   <children>
+      <Label layoutX="411.0" layoutY="174.0" prefHeight="47.0" prefWidth="126.0" text="Log In" textFill="gold">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_start" buttonType="RAISED" layoutX="664.0" layoutY="407.0" mnemonicParsing="false" onAction="#onStart" prefHeight="23.0" prefWidth="73.0" text="Login">
+         <font>
+            <Font size="14.0" />
+         </font></JFXButton>
+      <JFXTextField fx:id="tf_user" focusColor="deepskyblue" layoutX="425.0" layoutY="340.0" promptText="Please input user name">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <Label layoutX="303.0" layoutY="342.0" text="User Name" textFill="darkorange">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="303.0" layoutY="409.0" text="Password" textFill="darkorange">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="tf_password" focusColor="deepskyblue" layoutX="425.0" layoutY="407.0" promptText="Please input password">
+         <font>
+            <Font size="14.0" />
+         </font></JFXPasswordField>
+      <Label layoutX="77.0" layoutY="80.0" prefHeight="65.0" prefWidth="552.0" text="Retailer Management System" textFill="deepskyblue">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <JFXCheckBox fx:id="rememberInfo" layoutX="679.0" layoutY="346.0" mnemonicParsing="false" selected="true" text="Save Password" textFill="darkgreen" />
+      <Separator layoutX="285.0" layoutY="478.0" prefHeight="3.0" prefWidth="552.0" />
+      <Hyperlink layoutX="661.0" layoutY="495.0" onAction="#forgotPass" prefHeight="27.0" prefWidth="171.0" text="Forgot your password ?">
+         <font>
+            <Font size="14.0" />
+         </font></Hyperlink>
+      <Hyperlink layoutX="373.0" layoutY="495.0" prefHeight="27.0" prefWidth="171.0" text="Create a new account">
+         <font>
+            <Font size="14.0" />
+         </font></Hyperlink>
+      <JFXRadioButton fx:id="rb_customer" layoutX="411.0" layoutY="283.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="110.0" text="Customer" textFill="#00e5ff">
+         <toggleGroup>
+            <ToggleGroup fx:id="identity" />
+         </toggleGroup>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rb_employee" layoutX="596.0" layoutY="283.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="104.0" text="Employee" textFill="#00e5ff" toggleGroup="$identity">
+         <font>
+            <Font size="14.0" />
+         </font></JFXRadioButton>
+      <ProgressBar fx:id="prgs_login" layoutY="577.0" prefHeight="18.0" prefWidth="905.0" progress="0.0" />
+   </children>
+</AnchorPane>
